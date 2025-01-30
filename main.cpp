@@ -21,7 +21,7 @@ int main() {
 		do {
 			intro();//display introduction banner
 			//prompt user for choice
-			cout <<GREEN<< "Enter "<<RESET<<1<<GREEN<<" to continue and any other number to exit" << endl;
+			cout <<GREEN<< "Enter "<<RESET<<1<<GREEN<<" and "<<RESET<<0<<GREEN<<" to exit" << endl;
 			cout << "Enter your choice: "<<RESET;
 			cin >> userChoice;
 			//if input is not valid handle the error
