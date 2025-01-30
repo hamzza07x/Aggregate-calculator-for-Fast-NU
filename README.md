@@ -2,7 +2,7 @@
 
 # FAST NU Aggregate Calculator
 
-![FAST NU Aggregate Calculator](path-to-your-image.jpg)
+![FAST NU Aggregate Calculator](https://raw.githubusercontent.com/hamzza07x/Aggregate-calculator-for-Fast-NU/refs/heads/master/FAST%20NU%20aggregate%20calculator.png)
 
 ## Description
 
