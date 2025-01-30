@@ -7,6 +7,8 @@ using namespace std;
 
 // Section class implementation
 
+
+//default constructor for section class with default values
 Section::Section() {
     this->correctAnswers = 0;
     this->wrongAnswers = 0;
@@ -15,16 +17,18 @@ Section::Section() {
     this->scorePerWrong = 0.0;
     this->totalQuestions = 0;
 }
+//destructor for class section
 Section::~Section() {
 
 }
+//constructor for advanced math sectio with the values based on entry test criteria
 
 AdvanceMath::AdvanceMath() {
-    this->totalQuestions = 50;
-    this->scorePerCorrect = 1.00;
-    this->scorePerWrong = -0.25;
+    this->totalQuestions = 50;//total questions are 50
+    this->scorePerCorrect = 1.00;//+1 for each correct
+    this->scorePerWrong = -0.25;// -1 for each four wrong 
 }
-
+//input all the advanced math section 
 void AdvanceMath::inputAnswers() {
     cout << "Enter Advance Math details: " << endl;
     cout << "Enter number of attempted questions: "<<RESET;
@@ -45,34 +49,34 @@ void AdvanceMath::inputAnswers() {
     cout << YELLOW;
     cout << "Attempted questions entered: " <<RESET<< this->attemptedQuestions << endl;
     cout <<YELLOW<< "Correct ansers entered: " <<RESET<< this->correctAnswers << endl;
-    this->wrongAnswers = this->attemptedQuestions - this->correctAnswers;
+    this->wrongAnswers = this->attemptedQuestions - this->correctAnswers;//calculate wrong questions
     cout << GREEN;
 }
-
+//calculate the score for advance math section
 double AdvanceMath::calculateScore() {
     return (this->correctAnswers * this->scorePerCorrect) + (this->wrongAnswers * this->scorePerWrong);
 }
-
+//display advance math section score
 void AdvanceMath::displayScore() {
     cout <<YELLOW<< "Advance math score: " <<RESET<< this->calculateScore() << endl;
 }
-
+//display all inputs of advance math section
 void AdvanceMath::display() {
     cout <<YELLOW<< "Attempted questions: " <<RESET<< this->attemptedQuestions << endl;
     cout <<YELLOW<< "Correct answers: " <<RESET<< this->correctAnswers << endl;
     cout <<YELLOW<< "Wrong answers: " <<RESET<< this->wrongAnswers << endl;
 }
-
+//destructor for advance math class
 AdvanceMath::~AdvanceMath() {
 
 }
-
+//basic math constructor initialize with values as per test criteria
 BasicMath::BasicMath() {
     this->totalQuestions = 20;
     this->scorePerCorrect = 1.00;
     this->scorePerWrong = -0.25;
 }
-
+//input all required information for basic math section
 void BasicMath::inputAnswers() {
     cout << GREEN;
     cout << "Enter Basic math details: " << endl;
@@ -93,34 +97,34 @@ void BasicMath::inputAnswers() {
     cout << YELLOW;
     cout << "Attempted questions entered: " <<RESET<< this->attemptedQuestions << endl;
     cout <<YELLOW<< "Correct ansers entered: " <<RESET<< this->correctAnswers << endl;
-    this->wrongAnswers = this->attemptedQuestions - this->correctAnswers;
+    this->wrongAnswers = this->attemptedQuestions - this->correctAnswers;//calculate wrong questions
     cout << GREEN;
 }
-
+//calculate basic math score
 double BasicMath::calculateScore() {
     return (this->correctAnswers * this->scorePerCorrect) + (this->wrongAnswers * this->scorePerWrong);
 }
-
+//display basic math score
 void BasicMath::displayScore() {
     cout <<YELLOW<< "Basic math score: " <<RESET<< this->calculateScore() << endl;
 }
-
+//display all inputs of basic math section
 void BasicMath::display() {
     cout <<YELLOW<< "Attempted questions: " <<RESET<< this->attemptedQuestions << endl;
     cout <<YELLOW<< "Correct answers: " <<RESET<< this->correctAnswers << endl;
     cout <<YELLOW<< "Wrong answers: " <<RESET<< this->wrongAnswers << endl;
 }
-
+//destructor for basic math class
 BasicMath::~BasicMath() {
 
 }
-
+//constructor for intelligence class with values initialized with test criteria
 Intellegence::Intellegence() {
     this->totalQuestions = 20;
     this->scorePerCorrect = 1.00;
     this->scorePerWrong = -0.25;
 }
-
+//input all required information for intelligence section
 void Intellegence::inputAnswers() {
     cout << GREEN;
     cout << "Enter intelligence details: " << endl;
@@ -141,34 +145,34 @@ void Intellegence::inputAnswers() {
     cout << YELLOW;
     cout << "Attempted questions entered: " <<RESET<< this->attemptedQuestions << endl;
     cout <<YELLOW<< "Correct ansers entered: " <<RESET<< this->correctAnswers << endl;
-    this->wrongAnswers = this->attemptedQuestions - this->correctAnswers;
+    this->wrongAnswers = this->attemptedQuestions - this->correctAnswers;//calculate wrong questions
     cout << GREEN;
 }
-
+//calculate intelligence score
 double Intellegence::calculateScore() {
     return (this->correctAnswers * this->scorePerCorrect) + (this->wrongAnswers * this->scorePerWrong);
 }
-
+//display intelligence section score
 void Intellegence::displayScore() {
     cout <<YELLOW<< "Intelligence score: " <<RESET<< this->calculateScore() << endl;
 }
-
+//display all inputs of intelligence section
 void Intellegence::display() {
     cout <<YELLOW<< "Attempted questions: " <<RESET<< this->attemptedQuestions << endl;
     cout <<YELLOW<< "Correct answers: " <<RESET<< this->correctAnswers << endl;
     cout <<YELLOW<< "Wrong answers: " <<RESET<< this->wrongAnswers << endl;
 }
-
+//destructor for intelligence section
 Intellegence::~Intellegence() {
 
 }
-
+//english class destructor for initializing all values according to test criteria
 English::English() {
     this->totalQuestions = 30;
     this->scorePerCorrect = 0.33;
     this->scorePerWrong = -0.083;
 }
-
+//input required informations for english section
 void English::inputAnswers() {
     cout << GREEN;
     cout << "Enter English details: " << endl;
@@ -189,30 +193,32 @@ void English::inputAnswers() {
     cout << YELLOW;
     cout << "Attempted questions entered: " <<RESET<< this->attemptedQuestions << endl;
     cout <<YELLOW<< "Correct ansers entered: " <<RESET<< this->correctAnswers << endl;
-    this->wrongAnswers = this->attemptedQuestions - this->correctAnswers;
+    this->wrongAnswers = this->attemptedQuestions - this->correctAnswers;//calculate wrong questions
     cout << GREEN;
 }
-
+//calculate english section score
 double English::calculateScore() {
     return (this->correctAnswers * this->scorePerCorrect) + (this->wrongAnswers * this->scorePerWrong);
 }
-
+//display english section score
 void English::displayScore() {
     cout <<YELLOW<< "English score: " <<RESET<< this->calculateScore() << endl;
 }
-
+//display all inputs for english section
 void English::display() {
     cout <<YELLOW<< "Attempted questions: " <<RESET<< this->attemptedQuestions << endl;
     cout <<YELLOW<< "Correct answers: " <<RESET<< this->correctAnswers << endl;
     cout <<YELLOW<< "Wrong answers: " <<RESET<< this->wrongAnswers << endl;
 }
-
+//destructor for english class
 English::~English() {
 
 }
 
 // Aggregate calculator class implementation
 
+
+//constructor for aggregate calculator class initialized with default values
 AggregateCalculator::AggregateCalculator() {
     this->matricMarks = 0.0;
     this->intermidiateMarks = 0.0;
@@ -221,7 +227,7 @@ AggregateCalculator::AggregateCalculator() {
     this->entryTestScore = 0.0;
     this->totalAggregate = 0.0;
 }
-
+//input personal information of user
 void AggregateCalculator::inputPersonalInfo() {
     cout << GREEN;
     cout << "Enter your personal info: " << endl;
@@ -241,10 +247,10 @@ void AggregateCalculator::inputPersonalInfo() {
     cout << "Intermediate Marks Entered: " <<RESET<< this->intermidiateMarks <<YELLOW<< endl;
     cout << RED;
     system("pause");
-    calculatePercentages();
+    calculatePercentages();//calculate percentages for matric and intermediate
     cout << RESET;
 }
-
+//calculate percentages for matric and intermediate
 void AggregateCalculator::calculatePercentages() {
     if (this->matricMarks > 0 && this->matricMarks <= 1100 &&
         this->intermidiateMarks > 0 && this->intermidiateMarks <= 1100) {
@@ -257,7 +263,7 @@ void AggregateCalculator::calculatePercentages() {
         this->intermidiatePercentage = 0.0;
     }
 }
-
+//input all sections one by one
 void AggregateCalculator::inputAllSections() {
     system("cls");
     cout << GREEN;
@@ -283,11 +289,11 @@ void AggregateCalculator::inputAllSections() {
     cout << RESET;
     system("cls");
 }
-
+//calculate total score by summing all section scores
 double AggregateCalculator::calculateEntryTestScore() {
     return this->advanceMath.calculateScore() + this->basicMath.calculateScore() + this->intellegence.calculateScore() + this->english.calculateScore();
 }
-
+//calculate total aggregate for all section scores
 void AggregateCalculator::calculateTotalAggregate() {
     //this->displayAll();
     this->entryTestScore = calculateEntryTestScore();
@@ -312,7 +318,7 @@ void AggregateCalculator::calculateTotalAggregate() {
     cout <<YELLOW<< "Final Total Aggregate: " <<RESET<< this->totalAggregate <<"%"<< endl;
     cout <<YELLOW<< "----------------------------------------" << endl;
 }
-
+//display scores of all sections
 void AggregateCalculator::displayAllScores() {
     cout << YELLOW;
     cout << "Entry test details." << endl;
@@ -326,7 +332,7 @@ void AggregateCalculator::displayAllScores() {
     cout <<YELLOW<< "----------------------------------------" << endl;
     cout << RESET;
 }
-
+//display all and everything
 void AggregateCalculator::displayAll() {
     cout << YELLOW;
     cout <<YELLOW<< "----------------------------------------" << endl;
@@ -341,8 +347,7 @@ void AggregateCalculator::displayAll() {
     system("pause");
     cout << RESET;
 }
-
+//destructor for aggregate calculator class
 AggregateCalculator::~AggregateCalculator() {
 
 }
-
